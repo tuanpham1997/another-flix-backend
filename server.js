@@ -2,8 +2,13 @@
 const express = require('express')
 const app = express()
 require('dotenv').config()
+require('./config/database')
 
-// Port
-const PORT = 4020
+// ===== ROUTES =====
+// Movies
+app.use('/api/v1/movies', require('./routes/api/movies.js'))
 
-app.listen(PORT, () => console.log(`app running on port ${PORT}`))
+// ===== PORT =====
+const port = 8080
+
+app.listen(port, () => console.log(`Express app running on port ${port}`))
