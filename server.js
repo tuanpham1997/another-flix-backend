@@ -6,12 +6,14 @@ require('./config/database')
 
 // ===== MIDDLEWARES =====
 app.use(express.json())
+app.use(require('./config/checkToken'))
 
 // ===== ROUTES =====
-// Movies
-app.use('/api/v1/movies', require('./routes/api/movies'))
 // Users
 app.use('/api/v1/users', require('./routes/api/users'))
+const ensureLoggedIn = require('./config/ensureLoggedIn')
+// Movies
+app.use('/api/v1/movies', ensureLoggedIn, require('./routes/api/movies'))
 
 // ===== PORT =====
 const port = 8080

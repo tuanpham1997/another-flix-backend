@@ -11,6 +11,8 @@ DATE | PROGRESS | BLOCKERS | GOALS |
 ----- | ----- | ----- | -----| 
 06/14/2022 | Folder structures created. User & Movie models created. | None | Connect to DB. Create routes and controllers for Movie model. |
 06/15/2022 | Connected to DB.Finished CRUD on movies and users. Populated favorites | None | Auth |
+06/16/2022 | Auth functioning | None | Stretch goals |
+
 
 
 ## Technologies
@@ -19,6 +21,8 @@ DATE | PROGRESS | BLOCKERS | GOALS |
 
 1. Express
 2. Mongoose
+3. Bcrypt
+4. jsonwebtoken
 
 ## Stretch Goals
 
